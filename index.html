@@ -107,12 +107,7 @@
                <p>
                 In my free time, I like to play acoustic guitar, read, and going to concerts. I'm currently obsessed with playing "Cherry Wine" by Hozier. 
                </p>
-
-
             </div>
-
-            
-
           </div>
         </div>
       </div>
@@ -130,17 +125,22 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images/Birthday_Paradox.svg" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>The Birthday Paradox Simulator</h3>
               <p>
-               Motivation of the project
+               The birthday paradox is a phenomenon that states that in a room full of 23 people, there is a 50% chance at least 2 people share the same birthday. 
+               At 75 people, the chances increase to 99.9%. <a href="https://betterexplained.com/articles/understanding-the-birthday-paradox/" target="_blank">This website</a> does a good job giving the mathmatical explanation!
               </p>
               <p>
-              Functional requirements/what the project does
+              The top level of the program is a Simulation class, which creates an Experiment object for the number of people from 5 to 100 
+              at increments of 5 (so for 5, 10, 15, 20,..., 85, 90, 100) and with 20 trials each. The Experiment class runs the experiment based on the number of people and trials given. It returns a percent of 
+              trials that contained duplicate birth dates. A Trial object takes in the number of people in the experiment and returns a boolean 
+              value based on if a birthday repeats. The Birthday object creates a random day of the year to represent a single person and their 
+              birthday.  
               </p>
               <p>
               Project design
