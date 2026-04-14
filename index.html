@@ -122,13 +122,13 @@
             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Projects</h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+        <div class="row mb-5">
+          <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="">
           
-            <img src="images/Birthday_Paradox.svg" alt="Image of your project" class="img-fluid">
+            <img src="images/Birthday_Paradox.svg" alt="Birthday Paradox Graph" class="img-fluid w-75">
           
           </div>
-          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <h3>The Birthday Paradox Simulator</h3>
               <p>
@@ -142,17 +142,61 @@
               value based on if a birthday repeats. The Birthday object creates a random day of the year to represent a single person and their 
               birthday.  
               </p>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="">
+
+            <img src="images/Elevator_uml.png" alt="Image of elevator UML" class="img-fluid w-100">
+
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Elevator Simulator</h3>
               <p>
-              Project design
+                This project builds a fully functional elevator simulator that models how real buildings might manage
+                multiple elevators serving passengers across different floors. The simulator utilizes software
+                design, object-oriented programming, and test-driven development to create a system that mirrors the
+                complexity of real-world elevator dispatch logic.
               </p>
               <p>
-              Implementation
+                The simulator manages a building with up to four types of elevators - Standard, Freight, PentHouse,
+                and Express - each with its own rules for which calls it can accept and how it moves. Calls are
+                submitted as pickup and dropoff floor pairs, and a scheduler assigns them to elevators round by round.
+                Two scheduler strategies are available: a Simple Scheduler that always checks elevators left to right,
+                and a Complex Scheduler that assigns each call to whichever elevator can reach the pickup floor fastest.
+                The simulation runs until every call has been completed and every elevator has returned to the
+                ground floor, and prints the full state of the building at each round.
+              </p>
+              <p>
+                The project is built around a strong object-oriented foundation. An abstract Elevator class captures
+                all shared behavior - movement, pickup and dropoff logic, and direction management - while each elevator
+                subclass only needs to implement canTakeCall(), which implements its unique policy. This is inheritance
+                and polymorphism: the simulator can call move() and canTakeCall() on any elevator without knowing its
+                type. The Scheduler interface enforces a contract that both the Simple and
+                Complex implementations follow, making it easy to swap strategies without changing any other class.
+                Fields like occupancy, assignedCalls, and direction are kept on the Elevator class rather than
+                scattered across subclasses, which supports encapsulation and keeps each class focused on a single
+                responsibility. One key design assumption was tracking pickedUp state on each Call object rather
+                than maintaining separate lists for assigned vs. boarded passengers. This simplified the movement
+                logic considerably and kept findNextTargetFloor() clean.
+              </p>
+              <p>
+                I was responsible for implementing the Simulator class and the Elevator classes. This includes the main
+                simulation loop, the round-by-round print output, file loading, and the unserviceable call validation
+                that prevents infinite loops when an elevator configuration can't handle a given call. The logic in abstract
+                Elevator class required careful handling of rules for pickups, dropoffs, and direction changes.
+                Throughout the project I attempted to follow test-driven development, writing each unit test before implementing the
+                corresponding method and committing them together so the commit history reflects the TDD process. I used
+                Mockito to mock Call objects in elevator tests, which kept tests focused on elevator behavior without
+                depending on Call implementation details.
               </p>
 
 
             </div>
 
-            
+
 
           </div>
         </div>
