@@ -192,12 +192,50 @@
                 Mockito to mock Call objects in elevator tests, which kept tests focused on elevator behavior without
                 depending on Call implementation details.
               </p>
-
-
             </div>
+          </div>
+        </div>
 
 
+        <div class="row mb-5">
+          <div class="col-12 mb-4" data-aos="fade-up" data-aos-delay="">
 
+            <img src="images/UberCuts_UML.png" alt="Image of elevator UML" class="img-fluid w-100">
+
+          </div>
+          <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>UberCuts</h3>
+              <p>
+                The idea behind UberCuts is to create an application similar to UberEats, but for at-homehaircuts, nail appointments, and hair styling. 
+                College students are very busy with very little money to spare. It has become commonplace for students to do eachothers beauty services
+                at a discounted price. The students supplying the service get to make a little extra money and gain experience without the proper certification,
+                and earn some extra money, while the customers get to save money and keep up with their appearance. The problem is that there is no easy
+                way for students to find each other and connect. UberCuts would be a platform where students can create profiles, list the services they offer, 
+                and connect with customers. Customers can search for specific services, view profiles of students offering those services, and book appointments. 
+                The app would also include a rating system to help customers find reliable service providers and to help students build their reputations without 
+                the backing of professioinal salons.
+              </p>
+              <p>
+                Due to the time constraints of this project, we were only able to create a prototype of the app with extensive backend functionality. To simulate the 
+                useage of the application for both the customer and the service provider, we created a command line interface that allowed users to create accounts,
+                list services, search for services, and book appointments. To begin, the program begins with prompts to create an account as either a customer or 
+                a service provider. Service providers can then list the services they offer, whereas customers can search for specific services and filters by service 
+                types and price. When a customer selects a service they are prompted to pay beforehand for a service, similar to how UberEats requires payment before 
+                the delivery. The customer then selects a time for the appointment, and the program checks if the service provider is available at that time.
+              </p>
+              <p>
+                Our group decided to structure the program in Java using the Model-View-Controller (MVC) design pattern. The Model consists of the core data structures and 
+                business logic, including classes for a abstract and concrete user classes. The View is represented by the command line interface, which handles all 
+                user input and output. The Controller acts as an intermediary between the Model and the View, processing user commands, updating the Model accordingly, 
+                and refreshing the View to reflect changes. This separation of concerns allows us to maintain a clean codebase where the business logic is decoupled 
+                from the user interface, making it easier to manage and extend in the future. Abstract classes and interefaces are used to define common behaviors 
+                and contracts for users and services, while concrete classes implement specific functionalities for types of customers and service providers.
+              </p>
+              <p>
+                
+              </p>
+            </div>
           </div>
         </div>
       </div>
